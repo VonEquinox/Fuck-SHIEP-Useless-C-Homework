@@ -1,6 +1,5 @@
 /*  c5-2-6.c  */
 #include <math.h>
-#include <numeric>
 #include <stdio.h>
 int main()
 {
