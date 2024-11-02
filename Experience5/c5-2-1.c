@@ -8,7 +8,7 @@ int main()
     b = 0;
     for (i = 1; i <= 100; i += 2) {
         a = a + i;
-        b = b + i;
+        b = b + i + 1;
     }
     printf("偶数之和是：%d\n", b);
     printf("奇数之和是：%d\n", a);
