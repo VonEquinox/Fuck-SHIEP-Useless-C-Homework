@@ -13,7 +13,7 @@ int main()
         if (x > amax)
             amax = x;
         /************found***********/
-        else if (x < amin)
+        if (x < amin)
             amin = x;
         scanf("%f", &x);
     }
