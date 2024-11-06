@@ -4,11 +4,11 @@ int main()
 {
     int i, j, k;
     /************found***********/
-    for (i = 0; i <= 6; i = i + 2) {
-        for (j = 0; j <= 10 - 0.5 * i; j++)
+    for (i = 0; i <= 3; i++) {
+        for (j = 0; j <= 10-i; j++)
             printf(" ");
         /************found***********/
-        for (k = 0; k <= i; k++)
+        for (k = 0; k <= 2*i; k++)
             printf("*");
         printf("\n");
     }
