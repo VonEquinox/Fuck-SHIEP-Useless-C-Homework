@@ -2,18 +2,18 @@
 #include <stdio.h>
 int main()
 {
-	int i=0, a[11];
+	int i=0, a[10];
 	for (i = 1; i <= 10; i++)
     /************found***********/
 		a[i-1] = i;
-	printf("arra:\n");
+	printf("数组a:\n");
 	for (i = 0; i < 10; i++)
 		printf("%5d", a[i]);
 	printf("\n");
     for (i = 0; i < 5; i++)
     /************found***********/
 		a[9 - i] = i+1;
-	printf("对折后arra:\n");
+	printf("对折后数组a:\n");
 	for (i = 0; i < 10; i++)
 		printf("%5d", a[i]);
 	printf("\n");
