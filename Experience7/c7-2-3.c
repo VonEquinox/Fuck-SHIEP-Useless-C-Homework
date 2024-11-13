@@ -5,7 +5,7 @@ int main()
 {
 	int a[N] = { 10,20,30,40,50,60,70,80,90,100 };
 	int low, high, mid, x;
-	printf("输入待查找元素：");
+	printf("请输入待查找元素值：");
 	scanf("%d", &x);
 	low = 0;
     /************found***********/
@@ -16,7 +16,7 @@ int main()
 		mid = (low + high) / 2;
 		if (x == a[mid])
 		{
-			printf("元素%d的下标为%d\n", x, mid);
+			printf("元素%d的位置为%d\n", x, mid);
 			return 1;
 		}
 		else if (a[mid] > x)
@@ -27,6 +27,6 @@ int main()
 		else if (a[mid] < x)
 			low = mid + 1;
 	}
-	printf("没找到");
+	printf("元素%d没找到\n",x);
 	return 0;
 }
