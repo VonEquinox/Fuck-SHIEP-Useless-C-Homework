@@ -3,8 +3,8 @@
 #define M 11
 int main()
 {
-	int a[M], i = 0;
-	printf("input array a:\n");
+	int a[M], i;
+	printf("please input array a:\n");
 	for (i = 0; i < M - 1; i++)
 		scanf("%d", &a[i]);
 	a[M - 1] = a[0];
