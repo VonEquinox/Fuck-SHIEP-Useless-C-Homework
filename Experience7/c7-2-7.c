@@ -23,5 +23,6 @@ int main()
     printf("输入后数组:");
     for (int i = 0; i < 11; i++)
         printf("%d\t", a[i]);
+    printf("\n");
     return 0;
 }
