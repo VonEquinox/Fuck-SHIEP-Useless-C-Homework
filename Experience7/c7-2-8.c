@@ -22,10 +22,12 @@ int main()
             a[i - 1] = a[i];
         for (int i = 0; i < 9; i++)
             printf("%d ",a[i]);
+        printf("\n ");
     } else {
         printf("数组中不存在\n");
         for (int i = 0; i < 10; i++)
             printf("%d ",a[i]);
+        printf("\n ");
     }
     return 0;
 }
