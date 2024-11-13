@@ -18,5 +18,6 @@ int main()
     }
     for (int i = 0; i < k; i++)
         printf("%d ",arr[i]);
+    printf("\n");
     return 0;
 }
