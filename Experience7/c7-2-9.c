@@ -10,13 +10,13 @@ int main()
     int count = 0;
     for (int i = 0; i < 10; i++) {
         if (b == a[i]) {
-            for (int j = i + 1; j < 10-count; j++)
+            for (int j = i + 1; j < 10 - count; j++)
                 a[j - 1] = a[j];
-
             count++;
         }
     }
     for (int i = 0; i < 10 - count; i++)
         printf("%d ", a[i]);
+    printf("\n");
     return 0;
 }
