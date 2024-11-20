@@ -11,7 +11,7 @@ int main()
         int ta = A[i];
         int tb = B[i];
         result[i] += ta +tb;
-        if (result[i] > 10) {
+        if (result[i] >= 10) {
             result[i] -= 10;
             result[i+1] += 1;
         }
