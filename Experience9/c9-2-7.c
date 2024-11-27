@@ -11,7 +11,6 @@ int main()
     gets(ch);
     n = strlen(ch);
     for (i = 0; i <= (n - 1) / 2; i++) {
-        printf("%c", ch[i]); // test
         t = ch[i];
         ch[i] = ch[n - 1 - i];
         ch[n - 1 - i] = t;
