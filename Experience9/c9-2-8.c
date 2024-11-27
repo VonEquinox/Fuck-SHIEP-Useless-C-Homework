@@ -16,6 +16,6 @@ int main()
         c[k] = s[k];
     for (k = j; k < i; k++)
         c[k] = l[k - j];
-    printf("两者并在一起后得到%s", c);
+    printf("两者并在一起后得到%s\n", c);
     return 0;
 }
