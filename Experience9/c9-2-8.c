@@ -1,21 +1,15 @@
-/* c9-2-8.c */
 #include <stdio.h>
 #include <string.h>
-int main()
+int main ()
 {
     char s[50], l[50];
-    printf("输入两组单字符数组\n");
-    gets(s);
-    gets(l);
-    char c[100] = {"0"};
-    int j, i, k;
-    i = strlen(l);
-    j = strlen(s);
-    i = j + i;
-    for (k = 0; k < j; k++)
-        c[k] = s[k];
-    for (k = j; k < i; k++)
-        c[k] = l[k - j];
-    printf("两者并在一起后得到%s\n", c);
+    printf ("输入两组单字符数组\n");
+    fgets (s, sizeof (s), stdin);
+    fgets (l, sizeof (s), stdin);
+    char c[100] = {};
+    int now = 0;
+    for (int i = 0; s[i] != '\0' && s[i] != '\n'; i++) c[now++] = s[i];
+    for (int i = 0; l[i] != '\0' && l[i] != '\n'; i++) c[now++] = l[i];
+    printf ("两者并在一起后得到: %s\n", c);
     return 0;
 }
