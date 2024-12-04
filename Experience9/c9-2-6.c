@@ -1,32 +1,19 @@
-/*c9-2-6.c*/
 #include <stdio.h>
 #include <string.h>
-int main()
+int main ()
 {
-    char s[100];
-    int flag = 1, A = 0, a = 0, num = 0, space = 0, punctuation = 0, j = 0;
-    while (flag == 1) {
-        printf("输入一个长度小于等于80的字符串：\n");
-        gets(s);
-        if (strlen(s) >= 0 && strlen(s) <= 80)
-            flag = 0;
-        else
-            printf("重新输入\n");
+    char s[80];
+    int A = 0, a = 0, num = 0, space = 0, other = 0;
+    printf ("输入一个长度小于等于80的字符串:\n");
+    fgets (s, sizeof (s), stdin);
+    for (int i = 0; s[i] != '\0' && s[i] != '\n'; i++)
+    {
+        if (s[i] == ' ') space++;
+        else if (s[i] >= '0' && s[i] <= '9') num++;
+        else if (s[i] >= 'A' && s[i] <= 'Z') A++;
+        else if (s[i] >= 'a' && s[i] <= 'z') a++;
+        else other++;
     }
-    for (j = 0; s[j] != '\0'; j++) {
-        if (s[j] == 32)
-            space++;
-        else if (s[j] >= 48 && s[j] <= 57)
-            num++;
-        else if (s[j] >= 65 && s[j] <= 90)
-            A++;
-        else if (s[j] >= 97 && s[j] <= 122)
-            a++;
-        else
-            punctuation++;
-    }
-
-    printf("该字符串中有\n大写字母：%d\n小写字母：%d\n空格符：%d\n数字符：%d\n标点符号与运算符：%d\n", A, a, space, num,
-           punctuation);
+    printf ("该字符串中有大写字母: %d个, 小写字母: %d个, 空格: %d个, 数字: %d个, 其他字符: %d个\n", A, a, space, num, other);
     return 0;
 }
