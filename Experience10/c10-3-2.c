@@ -110,7 +110,7 @@ int main()
     char symbol = 0;
     scanf("%c", &symbol);
 
-    int bigint3[N] = {0};
+    int bigint3[2*N] = {0};
     switch (symbol) {
     case '+':
         add(bigint1, bigint2, bigint3);
