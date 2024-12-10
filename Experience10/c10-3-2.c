@@ -1,14 +1,11 @@
 /*c10-3-2.c*/
-
-#include <asm-generic/errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #define N 100
 
-#define IsInRangeEqual(Min, Value, Max)                                                                                \
-    (((unsigned int)Value - (unsigned int)Min) <= ((unsigned int)Max - (unsigned int)Min))
+#define IsInRangeEqual(Min, Value, Max) (Min <= Value && Value <= Max) 
 
 void input(int bigint[])
 {
@@ -24,10 +21,10 @@ void input(int bigint[])
     }
 }
 
-void output(int bigint[])
+void output(int bigint[], unsigned int size)
 {
     int PrintFlag = 0;
-    for (int i = N - 1; i >= 0; i--) {
+    for (int i = size - 1; i >= 0; i--) {
         if (bigint[i] != 0)
             PrintFlag = 1;
         if (PrintFlag)
@@ -110,20 +107,20 @@ int main()
     char symbol = 0;
     scanf("%c", &symbol);
 
-    int bigint3[2*N] = {0};
+    int bigint3[2*N+1] = {0};
     switch (symbol) {
     case '+':
         add(bigint1, bigint2, bigint3);
+        output(bigint3, N);
         break;
     case '-':
         sub(bigint1, bigint2, bigint3);
+        output(bigint3, N);
         break;
     case '*':
         multiply(bigint1, bigint2, bigint3);
+        output(bigint3, 2 * N + 1);
         break;
     }
-
-    output(bigint3);
-    
     return 0;
 }
