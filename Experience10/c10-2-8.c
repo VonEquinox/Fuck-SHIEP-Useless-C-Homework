@@ -30,6 +30,6 @@ int main()
     r1 = GCD(a, b);
     r2 = LCM(a, b);
     printf("\n两个数的最大公约数为:%d", r1);
-    printf("\n两个数的最小公约数为:%d", r2);
+    printf("\n两个数的最小公倍数数为:%d", r2);
     return 0;
 }
