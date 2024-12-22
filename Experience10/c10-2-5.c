@@ -1,7 +1,6 @@
-/* c10-2-5.c */
 #include <stdio.h>
 /************found************/
-int findmax(int s[], int n)
+int findmax (int s[], int n)
 {
     /************found************/
     int j, p;
@@ -13,14 +12,13 @@ int findmax(int s[], int n)
     /************found************/
     return p;
 }
-
-int main()
+int main ()
 {
     int a[10], i, k;
-    printf("请输入数组元素:");
+    printf ("请输入数组元素: ");
     for (i = 0; i < 10; i++)
-        scanf("%d", &a[i]);
-    k = findmax(a, 10);
-    printf("最大元素所在下标为： %d,最大元素为%d\n", k, a[k]);
+        scanf ("%d", &a[i]);
+    k = findmax (a, 10);
+    printf ("最大元素所在下标为: %d, 最大元素为%d\n", k, a[k]);
     return 0;
 }
