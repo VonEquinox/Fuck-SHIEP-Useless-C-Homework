@@ -1,4 +1,3 @@
-/*c12-2-9.c*/
 #include <stdio.h>
 #include <string.h>
 int main()
@@ -6,7 +5,7 @@ int main()
     char name[20][20];
     int i = 0, j = 0;
     char ch[20];
-    printf("input the name:");
+    printf("Input names:\n");
     for (i = 0; i < 20; i++)
         gets(name[i]);
     for (i = 0; i < 19; i++) {
@@ -18,7 +17,7 @@ int main()
             }
         }
     }
-    printf("排序后：\n");
+    printf("排序后:\n");
     for (i = 0; i < 20; i++)
         printf("%s\n", name[i]);
     return 0;

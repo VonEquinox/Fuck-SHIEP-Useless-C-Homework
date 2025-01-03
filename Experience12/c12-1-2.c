@@ -1,4 +1,3 @@
-/*c12-1-2.c*/
 #include <stdio.h>
 #include <string.h>
 int main()

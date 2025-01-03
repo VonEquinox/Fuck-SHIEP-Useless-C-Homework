@@ -1,11 +1,10 @@
-/*c12-2-4.c*/
 #include <stdio.h>
 int amax(int *a, int n)
 {
     int max = 0, i = 0;
-    max = *a;
+    max = *a;  // 1
     for (i = 1; i < n; i++)
-        if (max < *(a + i))
+        if (max < *(a + i))  // 2
             max = *(a + i);
     return max;
 }
@@ -13,7 +12,7 @@ int main()
 {
     int a[10];
     int i = 0;
-    printf("input array a:");
+    printf("Please input array a:\n");
     for (i = 0; i < 10; i++)
         scanf("%d", &a[i]);
     printf("MAX = %d\n", amax(a, 10));
